@@ -20,7 +20,7 @@ dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-10.noar
 
 # selinux stuff?
 
-dnf install -y policycoreutils policycoreutils-python setools setools-console setroubleshoot
+dnf install -y policycoreutils 
 
 # desktop
 
