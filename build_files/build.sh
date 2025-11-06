@@ -10,7 +10,13 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 
-dnf update
+# repos
+
+dnf config-manager --set-enabled crb  
+dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-10.noarch.rpm
+# dnf -y copr enable ublue-os/packages
+# dnf config-manager --add-repo https://pkgs.tailscale.com/stable/rhel/10/tailscale.repo
+
 
 # desktop
 
@@ -20,13 +26,6 @@ rm -rf /usr/share/plasma/look-and-feel/org.fedoraproject.fedora.desktop
 rm -rf /usr/share/wallpapers/fedora
 
 systemctl enable sddm.service
-
-# repos
-
-dnf config-manager --set-enabled crb  
-dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-10.noarch.rpm
-# dnf -y copr enable ublue-os/packages
-# dnf config-manager --add-repo https://pkgs.tailscale.com/stable/rhel/10/tailscale.repo
 
 # base
 
