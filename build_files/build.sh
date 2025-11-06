@@ -21,7 +21,7 @@ dnf config-manager --set-enabled crb
 
 # desktop
 
-dnf install -y --nobest @"KDE Plasma Workspaces"
+dnf group install -y "KDE Plasma Workspaces"
 dnf remove -y xwaylandvideobridge PackageKit
 
 # base
@@ -33,10 +33,8 @@ dnf install -y git distrobox fuse # ublue-os-udev-rules ublue-brew tailscale
 
 # flatpak
 
-dnf install -y flatpak
-
-mkdir -p /etc/flatpak/remotes.d 
-curl -o /etc/flatpak/remotes.d/flathub.flatpakrepo  https://dl.flathub.org/repo/flathub.flatpakrepo
+# mkdir -p /etc/flatpak/remotes.d 
+# curl -o /etc/flatpak/remotes.d/flathub.flatpakrepo  https://dl.flathub.org/repo/flathub.flatpakrepo
 
 
 
