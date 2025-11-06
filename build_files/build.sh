@@ -22,8 +22,6 @@ dnf config-manager --set-enabled crb
 # desktop
 
 dnf group install -y "KDE Plasma Workspaces"
-dnf remove -y xwaylandvideobridge
-
 # base
 
 dnf install -y git distrobox fuse # ublue-os-udev-rules ublue-brew tailscale
