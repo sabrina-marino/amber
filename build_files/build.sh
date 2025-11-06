@@ -13,7 +13,7 @@ set -ouex pipefail
 # repos
 
   
-dnf install -y epel-release selinux-policy selinux-policy-targeted policycoreutils
+dnf install -y epel-release 
 dnf config-manager --set-enabled crb
 # dnf -y copr enable ublue-os/packages
 # dnf config-manager --add-repo https://pkgs.tailscale.com/stable/rhel/10/tailscale.repo
@@ -22,7 +22,7 @@ dnf config-manager --set-enabled crb
 # desktop
 
 dnf group install -y "KDE Plasma Workspaces"
-dnf remove -y xwaylandvideobridge PackageKit
+dnf remove -y xwaylandvideobridge
 
 # base
 
