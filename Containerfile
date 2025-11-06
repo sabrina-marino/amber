@@ -3,7 +3,7 @@ FROM scratch AS ctx
 COPY build_files /
 
 # Base Image
-FROM ghcr.io/ublue-os/bazzite:stable
+FROM quay.io/centos-bootc/centos-bootc:stream10
 
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:latest
