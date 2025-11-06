@@ -12,28 +12,21 @@ set -ouex pipefail
 
 # repos
 
-dnf config-manager --set-enabled crb  
-dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-10.noarch.rpm
+  
+dnf install -y epel-release
+dnf config-manager --set-enabled crb
 # dnf -y copr enable ublue-os/packages
 # dnf config-manager --add-repo https://pkgs.tailscale.com/stable/rhel/10/tailscale.repo
 
 
-# selinux stuff?
-
-dnf install -y policycoreutils 
-
 # desktop
 
-dnf install -y @"KDE Plasma Workspaces"
+dnf install -y --nobest @"KDE Plasma Workspaces"
 dnf remove -y xwaylandvideobridge PackageKit
-rm -rf /usr/share/plasma/look-and-feel/org.fedoraproject.fedora.desktop
-rm -rf /usr/share/wallpapers/fedora
-
-systemctl enable sddm.service
 
 # base
 
-dnf install -y git distrobox # ublue-os-udev-rules ublue-brew tailscale
+dnf install -y git distrobox fuse # ublue-os-udev-rules ublue-brew tailscale
 
 # systemctl enable brew-setup.service
 # systemctl enable tailscaled.service
@@ -45,9 +38,6 @@ dnf install -y flatpak
 mkdir -p /etc/flatpak/remotes.d 
 curl -o /etc/flatpak/remotes.d/flathub.flatpakrepo  https://dl.flathub.org/repo/flathub.flatpakrepo
 
-# appimage
-
-dnf install -y fuse
 
 
 
