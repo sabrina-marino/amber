@@ -12,19 +12,19 @@ set -ouex pipefail
 
 # repos
 
-  
-dnf install -y epel-release 
-dnf config-manager --set-enabled crb
-# dnf -y copr enable ublue-os/packages
-# dnf config-manager --add-repo https://pkgs.tailscale.com/stable/rhel/10/tailscale.repo
-
-
-# desktop
-
-dnf group install -y "KDE Plasma Workspaces"
-# base
-
-dnf install -y git distrobox fuse # ublue-os-udev-rules ublue-brew tailscale
+#
+# dnf install -y epel-release
+# dnf config-manager --set-enabled crb
+# # dnf -y copr enable ublue-os/packages
+# # dnf config-manager --add-repo https://pkgs.tailscale.com/stable/rhel/10/tailscale.repo
+#
+#
+# # desktop
+#
+# dnf group install -y "KDE Plasma Workspaces"
+# # base
+#
+# dnf install -y git distrobox fuse # ublue-os-udev-rules ublue-brew tailscale
 
 # systemctl enable brew-setup.service
 # systemctl enable tailscaled.service
