@@ -29,7 +29,7 @@ systemctl enable sddm.service
 
 # base
 
-dnf install -y git distrobox sudo # ublue-os-udev-rules ublue-brew tailscale
+dnf install -y git distrobox # ublue-os-udev-rules ublue-brew tailscale
 
 # systemctl enable brew-setup.service
 # systemctl enable tailscaled.service
