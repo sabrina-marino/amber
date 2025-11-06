@@ -18,6 +18,10 @@ dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-10.noar
 # dnf config-manager --add-repo https://pkgs.tailscale.com/stable/rhel/10/tailscale.repo
 
 
+# selinux stuff?
+
+dnf install -y policycoreutils policycoreutils-python setools setools-console setroubleshoot
+
 # desktop
 
 dnf install -y @"KDE Plasma Workspaces"
