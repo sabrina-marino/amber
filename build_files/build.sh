@@ -13,7 +13,7 @@ set -ouex pipefail
 # repos
 
   
-dnf install -y epel-release
+dnf install -y epel-release selinux-policy selinux-policy-targeted policycoreutils
 dnf config-manager --set-enabled crb
 # dnf -y copr enable ublue-os/packages
 # dnf config-manager --add-repo https://pkgs.tailscale.com/stable/rhel/10/tailscale.repo
