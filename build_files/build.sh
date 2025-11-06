@@ -2,39 +2,12 @@
 
 set -ouex pipefail
 
-### Install packages
-
-# Packages can be installed from any enabled yum repo on the image.
-# RPMfusion repos are available by default in ublue main images
-# List of rpmfusion packages can be found here:
-# https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
-
-
-# repos
-
-#
-# dnf install -y epel-release
-# dnf config-manager --set-enabled crb
-# # dnf -y copr enable ublue-os/packages
-# # dnf config-manager --add-repo https://pkgs.tailscale.com/stable/rhel/10/tailscale.repo
-#
-#
-# # desktop
-#
-# dnf group install -y "KDE Plasma Workspaces"
-# # base
-#
-# dnf install -y git distrobox fuse # ublue-os-udev-rules ublue-brew tailscale
-
-# systemctl enable brew-setup.service
-# systemctl enable tailscaled.service
-
-# flatpak
-
-# mkdir -p /etc/flatpak/remotes.d 
-# curl -o /etc/flatpak/remotes.d/flathub.flatpakrepo  https://dl.flathub.org/repo/flathub.flatpakrepo
-
-
+dnf config-manager --set-enabled crb
+dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-10.noarch.rpm
+dnf group install -y "KDE Plasma Workspaces"
+systemctl set-default graphical.target
+systemctl enable sddm
+dnf install -y flatpak git distrobox fuse
 
 
 
