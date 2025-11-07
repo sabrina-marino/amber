@@ -2,7 +2,6 @@
 
 set -ouex pipefail
 dnf group install "Base" "Core" "Standard" "System Tools" --allowerasing -y
-dnf install dnf-plugins-core -y
 dnf config-manager --set-enabled crb
 dnf install epel-release -y
 dnf config-manager --set-enabled epel
