@@ -2,6 +2,7 @@
 
 set -ouex pipefail
 
+dnf config-manager --set-enabled crb
 dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-10.noarch.rpm
 dnf group install -y "KDE Plasma Workspaces"
 systemctl set-default graphical
