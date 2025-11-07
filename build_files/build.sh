@@ -1,9 +1,16 @@
 #!/bin/bash
 
 set -ouex pipefail
-dnf install git distrobox ptyxis restic -y #rclone bazaar -y
+dnf remove subscription-manager -y
+dnf install borgbackup distrobox fastfetch fish fwupd git htop ptyxis restic setools-console tmux zsh -y #rclone bazaar -y
 
+dnf copr enable ublue-os/packages -y
+dnf install ublue-brew ublue-udev-rules -y
+dnf copr disable ublue-os/packages -y
+dnf clean all
 
+systemctl enable brew-setup.service
+systemctl enable fwupd.service
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
