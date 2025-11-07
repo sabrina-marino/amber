@@ -6,8 +6,7 @@ dnf config-manager --set-enabled crb
 dnf install epel-release -y
 dnf config-manager --set-enabled epel
 dnf group install "KDE Plasma Workspaces" -y
-dnf install sddm -y
-systemctl enable sddm
+systemctl enable sddm avahi-daemon libstoragemgmt.service NetworkManager openvpn-client@client.service
 systemctl set-default graphical.target
 dnf install flatpak git distrobox fuse -y
 
