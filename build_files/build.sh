@@ -2,6 +2,7 @@
 
 set -ouex pipefail
 dnf update -y
+dnf install 'dnf-command(config-manager)'
 dnf config-manager --set-enabled crb
 dnf install epel-release -y
 dnf config-manager --set-enabled epel
