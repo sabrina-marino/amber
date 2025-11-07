@@ -3,7 +3,7 @@ FROM scratch AS ctx
 COPY build_files /
 
 # Base Image
-FROM quay.io/almalinuxorg/almalinux-bootc:l0-kitten
+FROM quay.io/almalinuxorg/almalinux-bootc:10-kitten
 
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:latest
