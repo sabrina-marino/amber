@@ -1,7 +1,6 @@
 #!/bin/bash
 
 set -ouex pipefail
-
 dnf install -y 'dnf-command(config-manager)'
 dnf config-manager --set-enabled crb
 dnf install epel-release -y
@@ -9,7 +8,7 @@ dnf config-manager --set-enabled epel
 dnf group install "KDE Plasma Workspaces" --allowerasing -y
 systemctl enable sddm
 systemctl set-default graphical.target
-dnf install flatpak git distrobox fuse -y
+dnf install flatpak git distrobox fuse bootc -y
 
 
 # Use a COPR Example:
