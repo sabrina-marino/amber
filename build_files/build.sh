@@ -6,8 +6,8 @@ dnf config-manager --set-enabled crb
 dnf install epel-release -y
 dnf config-manager --set-enabled epel
 dnf group install "KDE Plasma Workspaces" -y
-systemctl enable sddm
-systemctl set-default graphical.target
+# systemctl enable sddm
+# systemctl set-default graphical.target
 dnf install flatpak git distrobox fuse -y
 
 
