@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -ouex pipefail
-# dnf install -y 'dnf-command(config-manager)'
+dnf install -y dnf-plugins-core
 dnf config-manager --set-enabled crb
 dnf install epel-release -y
 dnf config-manager --set-enabled epel
