@@ -2,14 +2,14 @@
 
 set -ouex pipefail
 
-dnf config-manager --set-enabled crb
 dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-10.noarch.rpm
 dnf group install -y "KDE Plasma Workspaces"
-systemctl set-default graphical.target
+systemctl set-default graphical
 systemctl enable sddm
 dnf install -y flatpak git distrobox fuse
-
-
+dnf install -y centos-release-kmods
+dnf config-manager --set-enabled kmods
+dnf install -y btrfs-progs
 
 
 # Use a COPR Example:
@@ -21,4 +21,4 @@ dnf install -y flatpak git distrobox fuse
 
 #### Example for enabling a System Unit File
 
-# systemctl enable podman.socket
+systemctl enable podman.socket
