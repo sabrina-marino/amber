@@ -2,10 +2,10 @@
 
 set -ouex pipefail
 dnf remove subscription-manager -y
-dnf install borgbackup distrobox fastfetch fish fwupd git htop ptyxis restic setools-console tmux zsh -y #rclone bazaar -y
+dnf install borgbackup distrobox fastfetch fish fwupd git ptyxis restic tmux zsh -y #rclone bazaar -y
 
 dnf copr enable ublue-os/packages -y
-dnf install ublue-brew ublue-udev-rules -y
+dnf install ublue-brew ublue-os-udev-rules -y
 dnf copr disable ublue-os/packages -y
 dnf clean all
 
