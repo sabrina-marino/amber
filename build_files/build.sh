@@ -4,13 +4,14 @@ set -ouex pipefail
 
 dnf config-manager --set-enabled crb
 dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-10.noarch.rpm
+dnf config-manager --set-enabled epel
 dnf group install -y "KDE Plasma Workspaces"
 systemctl set-default graphical
 systemctl enable sddm
 dnf install -y flatpak git distrobox fuse
 dnf install -y centos-release-kmods
-dnf config-manager --set-enabled kmods
-dnf install -y btrfs-progs
+dnf config-manager --set-enabled centos-kmods-rebuild
+dnf install -y centos-release-kmods-kernel
 
 
 # Use a COPR Example:
