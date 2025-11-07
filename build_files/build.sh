@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -ouex pipefail
-dnf install git distrobox ptyxis restic #rclone bazaar -y
+dnf install git distrobox ptyxis restic -y #rclone bazaar -y
 
 
 # Use a COPR Example:
