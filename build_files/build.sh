@@ -2,12 +2,22 @@
 
 set -ouex pipefail
 dnf remove subscription-manager -y
+
 dnf install distrobox fastfetch git rclone restic -y #rclone bazaar -y
 dnf install haruna gwenview kweather kate kcalc kontact okular skanpage -y
+dnf install util-linux-user fish -y
+
+chsh -s /usr/bin/fish
 
 dnf copr enable ublue-os/packages -y
 dnf install ublue-brew ublue-os-udev-rules -y
 dnf copr disable ublue-os/packages -y
+
+
+dnf copr enable atim/starship -y
+dnf install starship
+dnf copr disable atim/starship
+
 dnf clean all
 
 systemctl enable brew-setup.service
