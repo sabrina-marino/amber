@@ -4,6 +4,12 @@ set -ouex pipefail
 
 
 # dnf group install "Common NetworkManager submodules" "Fonts" "Hardware Support" "Printing Client" -y
+
+dnf config-manager --add-repo=https://negativo17.org/repos/epel-multimedia.repo
+dnf config-manager --set-disabled epel-multimedia
+dnf install --enablerepo=epel-multimedia ffmpeg libavcodec @multimedia gstreamer1-plugins-{bad-free,bad-free-libs,good,base} lame{,-libs} libjxl ffmpegthumbnailer -y
+
+
 dnf install distrobox fastfetch git restic buildah -y
 dnf install gwenview kweather kate kcalc kontact okular skanpage -y # haruna
 dnf install fish -y
@@ -12,7 +18,7 @@ dnf install fish -y
 
 dnf copr enable ublue-os/packages -y
 dnf install ublue-brew ublue-os-udev-rules -y
-dnf install ublue-polkit-rules ublue-os-just ublue-os-update-services ublue-setup-services uupd -y
+dnf install ublue-polkit-rules ublue-os-just ublue-os-update-services ublue-setup-services uupd ublue-bling ublue-rebase-helper -y
 dnf copr disable ublue-os/packages -y
 
 systemctl enable brew-setup.service
