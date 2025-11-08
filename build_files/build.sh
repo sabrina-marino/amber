@@ -2,7 +2,8 @@
 
 set -ouex pipefail
 dnf remove subscription-manager -y
-dnf install borgbackup distrobox fastfetch fish fwupd git ptyxis restic tmux zsh -y #rclone bazaar -y
+dnf install distrobox fastfetch git rclone restic -y #rclone bazaar -y
+dnf install haruna gwenview kweather kate kcalc kontact okular skanpage -y
 
 dnf copr enable ublue-os/packages -y
 dnf install ublue-brew ublue-os-udev-rules -y
