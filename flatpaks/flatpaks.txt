@@ -1,0 +1,9 @@
+org.mozilla.firefox
+org.mozilla.Thunderbird
+org.gnome.DejaDup
+org.fedoraproject.MediaWriter
+com.github.tchx84.Flatseal
+io.github.flattool.Warehouse
+org.kde.haruna
+com.ranfdev.DistroShelf
+it.mijorus.gearlever
