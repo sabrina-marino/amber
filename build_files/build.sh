@@ -5,9 +5,9 @@ set -ouex pipefail
 
 # dnf group install "Common NetworkManager submodules" "Fonts" "Hardware Support" "Printing Client" -y
 
-dnf config-manager --add-repo=https://negativo17.org/repos/epel-multimedia.repo
-dnf config-manager --set-disabled epel-multimedia
-dnf install --enablerepo=epel-multimedia ffmpeg libavcodec @multimedia gstreamer1-plugins-{bad-free,bad-free-libs,good,base} lame{,-libs} libjxl ffmpegthumbnailer -y
+# dnf config-manager --add-repo=https://negativo17.org/repos/epel-multimedia.repo
+# dnf config-manager --set-disabled epel-multimedia
+# dnf install --enablerepo=epel-multimedia ffmpeg libavcodec @multimedia gstreamer1-plugins-{bad-free,bad-free-libs,good,base} lame{,-libs} libjxl ffmpegthumbnailer -y
 
 
 dnf install distrobox fastfetch git restic buildah -y
