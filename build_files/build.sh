@@ -3,7 +3,7 @@
 set -ouex pipefail
 dnf remove subscription-manager -y
 
-dnf install distrobox fastfetch git rclone restic -y #rclone bazaar -y
+dnf install distrobox fastfetch git restic -y #rclone bazaar -y
 dnf install haruna gwenview kweather kate kcalc kontact okular skanpage -y
 dnf install util-linux-user fish -y
 
