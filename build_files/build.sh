@@ -16,7 +16,7 @@ dnf copr disable ublue-os/packages -y
 dnf clean all
 
 systemctl enable brew-setup.service
-systemctl enable fwupd.service
+# systemctl enable fwupd.service
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
