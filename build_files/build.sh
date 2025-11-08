@@ -10,7 +10,7 @@ set -ouex pipefail
 # dnf install --enablerepo=epel-multimedia ffmpeg libavcodec @multimedia gstreamer1-plugins-{bad-free,bad-free-libs,good,base} lame{,-libs} libjxl ffmpegthumbnailer -y
 
 
-dnf install distrobox fastfetch git restic buildah -y
+dnf install distrobox fastfetch git restic buildah fzf fpaste glow gum hplip nss-mdns ntfs-3g tuned-ppd -y
 dnf install gwenview kweather kate kcalc kontact okular skanpage -y # haruna
 dnf install fish -y
 
@@ -32,7 +32,7 @@ systemctl mask bootc-fetch-apply-updates.timer bootc-fetch-apply-updates.service
 authselect enable-feature with-fingerprint
 # systemctl enable systemd-resolved.service
 
-
+dnf remove PackageKit PackageKit-command-not-found -y
 
 dnf clean all
 
