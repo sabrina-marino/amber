@@ -2,7 +2,7 @@
 
 set -ouex pipefail
 
-dnf install distrobox fastfetch git restic buildah -y
+dnf install distrobox fastfetch git restic bootc buildah -y
 dnf install gwenview kweather kate kcalc kontact okular skanpage -y # haruna
 dnf install fish -y
 
@@ -20,8 +20,8 @@ systemctl enable ublue-system-setup.service
 systemctl enable uupd.timer
 systemctl --global enable ublue-user-setup.service
 systemctl mask bootc-fetch-apply-updates.timer bootc-fetch-apply-updates.service
-authselect enable-feature with-fingerprint
-systemctl enable systemd-resolved.service
+# authselect enable-feature with-fingerprint
+# systemctl enable systemd-resolved.service
 
 
 
