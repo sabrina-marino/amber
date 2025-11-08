@@ -15,6 +15,7 @@ dnf install ublue-brew ublue-os-udev-rules -y
 dnf install ublue-polkit-rules ublue-os-just ublue-os-update-services ublue-setup-services uupd -y
 dnf copr disable ublue-os/packages -y
 
+systemctl enable brew-setup.service
 systemctl disable mcelog.service
 systemctl --global enable podman-auto-update.timer
 systemctl disable rpm-ostree.service
@@ -29,7 +30,7 @@ authselect enable-feature with-fingerprint
 
 dnf clean all
 
-systemctl enable brew-setup.service
+
 # systemctl enable fwupd.service
 # Use a COPR Example:
 #
