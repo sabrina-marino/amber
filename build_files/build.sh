@@ -3,7 +3,7 @@
 set -ouex pipefail
 
 
-dnf group install "Common NetworkManager submodules" "Fonts" "Hardware Support" "Printing Client" -y
+# dnf group install "Common NetworkManager submodules" "Fonts" "Hardware Support" "Printing Client" -y
 dnf install distrobox fastfetch git restic buildah -y
 dnf install gwenview kweather kate kcalc kontact okular skanpage -y # haruna
 dnf install fish -y
