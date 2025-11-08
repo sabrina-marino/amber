@@ -1,10 +1,9 @@
 #!/bin/bash
 
 set -ouex pipefail
-dnf remove subscription-manager -y
 
-dnf install distrobox fastfetch git restic -y #rclone bazaar -y
-dnf install haruna gwenview kweather kate kcalc kontact okular skanpage -y
+dnf install distrobox fastfetch git restic -y
+dnf install gwenview kweather kate kcalc kontact okular skanpage -y # haruna
 dnf install util-linux-user fish -y
 
 chsh -s /usr/bin/fish
