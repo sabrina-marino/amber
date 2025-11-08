@@ -22,7 +22,7 @@ systemctl enable ublue-system-setup.service
 systemctl enable uupd.timer
 systemctl --global enable ublue-user-setup.service
 systemctl mask bootc-fetch-apply-updates.timer bootc-fetch-apply-updates.service
-# authselect enable-feature with-fingerprint
+authselect enable-feature with-fingerprint
 # systemctl enable systemd-resolved.service
 
 
