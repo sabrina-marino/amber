@@ -6,7 +6,7 @@ dnf install distrobox fastfetch git restic -y
 dnf install gwenview kweather kate kcalc kontact okular skanpage -y # haruna
 dnf install fish -y
 
-chsh -s /usr/bin/fish
+# chsh -s /usr/bin/fish
 
 dnf copr enable ublue-os/packages -y
 dnf install ublue-brew ublue-os-udev-rules -y
