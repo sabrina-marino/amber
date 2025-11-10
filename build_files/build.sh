@@ -8,7 +8,7 @@ set -ouex pipefail
 # dnf config-manager --add-repo=https://negativo17.org/repos/epel-multimedia.repo
 # dnf config-manager --set-disabled epel-multimedia
 # dnf install --enablerepo=epel-multimedia ffmpeg libavcodec @multimedia gstreamer1-plugins-{bad-free,bad-free-libs,good,base} lame{,-libs} libjxl ffmpegthumbnailer -y
-rsync -rvK /ctx/system-files /
+rsync -rvK /ctx/system_files/ /
 
 dnf install fish distrobox fastfetch git restic buildah fzf fpaste glow gum hplip ntfs-3g ptyxis -y
 dnf install gwenview kweather kate kcalc kontact okular skanpage -y # haruna
