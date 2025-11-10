@@ -10,9 +10,8 @@ set -ouex pipefail
 # dnf install --enablerepo=epel-multimedia ffmpeg libavcodec @multimedia gstreamer1-plugins-{bad-free,bad-free-libs,good,base} lame{,-libs} libjxl ffmpegthumbnailer -y
 
 
-dnf install distrobox fastfetch git restic buildah fzf fpaste glow gum hplip ntfs-3g ptyxis -y
+dnf install fish distrobox fastfetch git restic buildah fzf fpaste glow gum hplip ntfs-3g ptyxis -y
 dnf install gwenview kweather kate kcalc kontact okular skanpage -y # haruna
-dnf install fish -y
 
 # chsh -s /usr/bin/fish
 
