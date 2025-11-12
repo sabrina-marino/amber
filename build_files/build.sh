@@ -5,15 +5,13 @@ set -ouex pipefail
 
 # rsync -rvK /ctx/system_files/ /
 
-dnf group install audio -y
-# dnf group install "Design Suite" -y
-dnf install fish zsh -y
-dnf install ptyxis kweather kcalc kontact okular skanpage -y
-dnf install rclone restic buildah fzf ntfs-3g -y
-dnf copr enable ublue-os/packages -y
-dnf install ublue-bling ublue-brew ublue-os-just ublue-rebase-helper ublue-os-setup-services ublue-os-update-services uupd -y
-dnf copr disable ublue-os/packages -y
-
-dnf remove firefox firefox-langpacks PackageKit PackageKit-command-not-found -y
-
-dnf clean all
+dnf5 group install audio -y
+#dnf5 group install "Design Suite" -y
+dnf5 install fish zsh -y
+dnf5 install ptyxis kweather kcalc kontact okular skanpage -y
+dnf5 install rclone restic buildah fzf ntfs-3g -y
+dnf5 copr enable ublue-os/packages -y
+dnf5 install ublue-bling ublue-brew ublue-os-just ublue-rebase-helper ublue-os-setup-services ublue-os-update-services uupd -y
+dnf5 copr disable ublue-os/packages -y
+dnf5 remove firefox firefox-langpacks PackageKit PackageKit-command-not-found -y
+dnf5 clean all
