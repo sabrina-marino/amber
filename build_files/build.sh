@@ -9,7 +9,9 @@ set -ouex pipefail
 # dnf5 install LinVst -y
 # dnf5 copr disable ycollet/audinux -y
 dnf5 install realtime-setup -y
+dnf5 install python3-legacy-cgi -y # raysession dependency
 dnf5 group install audio -y
+dnf5 remove rakarrack -y # this one doesn't work
 #dnf5 group install "Design Suite" -y
 dnf5 install fish zsh -y
 dnf5 install gwenview ptyxis kweather kcalc okular skanpage vlc -y
